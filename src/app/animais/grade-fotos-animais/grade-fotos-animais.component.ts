@@ -7,7 +7,7 @@ import { Component, Input, OnInit } from '@angular/core';
   styleUrls: ['./grade-fotos-animais.component.css'],
 })
 export class GradeFotosAnimaisComponent implements OnInit {
-  @Input animais!: Animais;
+  @Input() animais!: Animais;
 
   constructor() {}
 

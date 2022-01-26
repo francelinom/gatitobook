@@ -1,6 +1,6 @@
 export interface Animal {
   id: number;
-  postDate: string;
+  postDate: Date;
   url: string;
   description: string;
   allowComments: boolean;
