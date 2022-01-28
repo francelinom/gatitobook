@@ -37,4 +37,16 @@ export class AnimaisService {
         })
       );
   }
+
+  upload(descricao: string, permiteComentario: boolean, arquivo: File) {
+    const formDate = new FormData();
+    formDate.append('description', descricao);
+    formDate.append('allowComments', permiteComentario ? 'true' : 'false');
+    formDate.append('imageFile', arquivo);
+
+    return this.http.post(`${API}/photos/upload`, formDate, {
+      observe: 'events',
+      reportProgress: true,
+    });
+  }
 }
