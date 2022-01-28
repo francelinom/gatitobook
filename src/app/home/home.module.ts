@@ -1,3 +1,4 @@
+import { SharedModule } from './../shared/shared.module';
 import { MensagemModule } from './../components/mensagem/mensagem.module';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
@@ -10,13 +11,7 @@ import { NovoUsuarioComponent } from './novo-usuario/novo-usuario.component';
 
 @NgModule({
   declarations: [HomeComponent, LoginComponent, NovoUsuarioComponent],
-  imports: [
-    CommonModule,
-    HomeRoutingModule,
-    FormsModule,
-    MensagemModule,
-    ReactiveFormsModule,
-  ],
+  imports: [CommonModule, HomeRoutingModule, FormsModule, SharedModule],
   exports: [HomeComponent],
 })
 export class HomeModule {}
