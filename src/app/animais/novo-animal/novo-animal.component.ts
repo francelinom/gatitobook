@@ -18,12 +18,12 @@ export class NovoAnimalComponent implements OnInit {
 
   constructor(
     private animaisService: AnimaisService,
-    private formBuilder: FormBuilder,
+    private formbuilder: FormBuilder,
     private router: Router
   ) {}
 
   ngOnInit(): void {
-    this.formularioAnimal = this.formBuilder.group({
+    this.formularioAnimal = this.formbuilder.group({
       file: ['', Validators.required],
       description: ['', Validators.maxLength(300)],
       allowComments: [true],
